@@ -1,6 +1,6 @@
 ---
 resources:
-- name: resource-tutorial
+- name: resource-tut
   type: git
   source:
     uri: https://github.com/starkandwayne/concourse-tutorial.git
@@ -9,8 +9,8 @@ jobs:
 - name: job-pass-files
   public: true
   plan:
-  - get: resource-tutorial
+  - get: resource-tut
   - task: create-some-files
-    file: resource-tutorial/11_task_outputs_to_inputs/create_some_files.yml
+    file: resource-tut/11_task_outputs_to_inputs/create_some_files.yml
   - task: show-some-files
-    file: resource-tutorial/11_task_outputs_to_inputs/show_files.yml
+    file: resource-tut/11_task_outputs_to_inputs/show_files.yml
