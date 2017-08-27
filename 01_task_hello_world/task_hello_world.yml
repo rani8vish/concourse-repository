@@ -6,5 +6,19 @@ image_resource:
   source: {repository: busybox}
 
 run:
-  path: echo
-  args: [hello world]
+   user: root
+  path: sh
+  args:
+  - -exc
+  - |
+   echo "This is a docker container"
+   pwd
+   ls -lrt
+   echo " "
+   df -a
+   echo "   "
+   du -k 
+   echo "-  "
+   uname -a
+   echo " "
+   ps -ef
