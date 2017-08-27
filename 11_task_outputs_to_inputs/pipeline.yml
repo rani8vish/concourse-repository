@@ -3,7 +3,7 @@ resources:
 - name: resource-tut
   type: git
   source:
-    uri: https://github.com/starkandwayne/concourse-tutorial.git
+    uri: https://github.com/rani8vish/concourse-tutorial.git
 
 jobs:
 - name: job-pass-files
